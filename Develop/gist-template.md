@@ -1,10 +1,10 @@
 # Title (replace with your title)
 
-Introductory paragraph (replace this with your text)
+Regex Tutorial for an Email.
 
 ## Summary
 
-Briefly summarize the regex you will be describing and what you will explain. Include a code snippet of the regex. Replace this text with your summary.
+This tutorial will thuroughly explain wwhat a regex code is and how it matches up with an email adress
 
 ## Table of Contents
 
@@ -21,6 +21,11 @@ Briefly summarize the regex you will be describing and what you will explain. In
 - [Look-ahead and Look-behind](#look-ahead-and-look-behind)
 
 ## Regex Components
+([a-zA-Z0-9_.-]+) This section of code will check each character from a - z uppercase and lowercase including numbers and the special characters of `_`, `.` and `/`. The plus sign on the end indicates that it can be of any length of character from one to an 'inifnity'. This part of the code in our example will specifically be for the body of the email. 
+
+@([\da-zA-Z.-]+) This section of code is similar to the first one but does not include numbers. This one has the @ symbol at the start indicating that it will look for a domain name for an email and check wether or not the email is a valid name.
+
+([a-zA-Z.]{2,})
 
 ### Anchors
 
@@ -35,10 +40,13 @@ Briefly summarize the regex you will be describing and what you will explain. In
 ### Grouping and Capturing
 
 ### Bracket Expressions
-
+`[a-zA-Z0-9_.-]` 
+The Bracket Expressions will define which characters will be defined, anything within these bracked the sequence will look for try to match.
 ### Greedy and Lazy Match
 
 ### Boundaries
+`@([\da-zA-Z.-]+)`
+The Boundaries are not typically used for emails because the `@` symbol acts as its own boundary between the email body and the email domain.
 
 ### Back-references
 
