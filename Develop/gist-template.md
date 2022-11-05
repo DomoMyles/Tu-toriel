@@ -30,10 +30,20 @@ This tutorial will thuroughly explain wwhat a regex code is and how it matches u
 ### Anchors
 
 ### Quantifiers
+`/^([a-zA-Z0-9_.-]+)@([\da-zA-Z.-]+).([a-zA-Z.]{2,9})$/`
+The quantifiers in this example include where the `+` and where the `{2.6}` are. They tell the amount of characters that the regex must match. The `+` will indicate the number of characters that the string will match. There are other quantifiers, such as a `?` which will match 0 or one characters, while a `*` will match 0 or more characters. The `{2,9}` in our example will match a character that is atleast '2' but no more that '9' characters long. 
+The quantifiers will usually be placed after the end of the brackets that defign what it will be looking for for example:
+`([a-zA-Z.]{2,9})` 
+This will look for any lowercase or uppercase letters expression but must be between 2 and 9 characters long.
 
 ### OR Operator
-
+An Or operation is as simple as a boolean operationn in the way that it can match the expression befor or after the `|`. This can be used within a single group and/or used in the entire sequence.
 ### Character Classes
+`[\da-zA-Z.-]`
+Character classes are used to define a single character or digit, they are used within a group befor the expressions are defined as shown above.
+`\d` Will match one digit filliwing
+`\s` Will match a blank space such as a space or a tab
+`\w` will match a single alpganumeric character or underscore. 
 
 ### Flags
 
@@ -47,8 +57,6 @@ The Bracket Expressions will define which characters will be defined, anything w
 ### Boundaries
 `@([\da-zA-Z.-]+)`
 The Boundaries are not typically used for emails because the `@` symbol acts as its own boundary between the email body and the email domain.
-
-### Back-references
 
 ### Look-ahead and Look-behind
 
