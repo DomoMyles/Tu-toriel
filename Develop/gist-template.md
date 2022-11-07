@@ -42,7 +42,7 @@ An Or operation is as simple as a boolean operationn in the way that it can matc
 `[\da-zA-Z.-]`
 Character classes are used to define a single character or digit, they are used within a group befor the expressions are defined as shown above.
 `\d` Will match one digit filliwing
-`\s` Will match a blank space such as a space or a tab
+`\s` Will match a blank space such as a space or a tabd
 `\w` will match a single alpganumeric character or underscore. 
 
 ### Flags
